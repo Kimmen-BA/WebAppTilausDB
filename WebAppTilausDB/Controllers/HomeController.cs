@@ -52,7 +52,8 @@ namespace WebAppTilausDB.Controllers
                 return View("Login", LoginModel);
             }
         }
-        public ActionResult LogOut()        {
+        public ActionResult LogOut()       
+        {
             Session.Abandon();
             ViewBag.LoggedStatus = "Out";
             return RedirectToAction("Index", "Home"); //Uloskirjautumisen jälkeen pääsivulle
